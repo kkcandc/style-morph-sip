@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAME SEAT</title>
+    <meta
+      name="description"
+      content="One maquette, one pose, fifteen rooms. A locked-pose style morph that ends with a sip."
+    />
+    <meta name="theme-color" content="#090807" />
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body>
+    <canvas id="stage"></canvas>
+    <div class="hud">
+      <header>
+        <p class="mark">Same Seat</p>
+        <p id="lock" class="lock"><i></i><span id="lock-label">Pose locked</span></p>
+      </header>
+      <p id="slam" class="slam" aria-hidden="true"></p>
+      <footer>
+        <div id="progress"></div>
+        <div class="readout">
+          <span id="num">01</span>
+          <div>
+            <h1 id="name">Plaster Hour</h1>
+            <p id="kicker">Soft studio clay</p>
+          </div>
+          <span id="clock">00:00.0</span>
+        </div>
+        <div id="ticks" class="ticks"></div>
+        <div class="controls">
+          <button id="prev" type="button">Prev</button>
+          <button id="play" type="button" aria-pressed="true">Pause</button>
+          <button id="next" type="button">Next</button>
+          <button id="sound" type="button" aria-pressed="false">Sound off</button>
+          <button id="full" type="button">Full screen</button>
+          <p class="help">Space pause · arrows step · R restart · M sound · F fullscreen</p>
+        </div>
+      </footer>
+    </div>
+    <div id="boot"><p>Same Seat</p></div>
+    <p id="error" hidden></p>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
